@@ -49,7 +49,7 @@ ZSH_THEME="mytheme"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git battery cp svn-fast-info bower composer gem docker brew)
+plugins=(git battery cp bower composer gem docker brew)
 
 source $ZSH/oh-my-zsh.sh
 
