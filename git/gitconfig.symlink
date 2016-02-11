@@ -1,12 +1,6 @@
 [include]
     path = .gitconfig.credentials
 
-[credential]
-    helper = osxkeychain
-
-[init]
-    templatedir = /Users/guillaume/Workspace/hooks/templates
-
 [color]
     ui = true
 
