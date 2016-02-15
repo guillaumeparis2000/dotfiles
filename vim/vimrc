@@ -26,7 +26,7 @@ set pastetoggle=<F3>
 " Hide default status line
 set noshowmode
 
-set shell=/bin/bash
+set shell=/bin/zsh
 set encoding=utf-8
 set ffs=unix,dos,mac "Default file types
 
@@ -70,7 +70,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/syntastic'
-" Plugin 'wincent/Command-T'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'wakatime/vim-wakatime'
@@ -78,6 +77,8 @@ Plugin 'wakatime/vim-wakatime'
 Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'terryma/vim-multiple-cursors'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -155,22 +156,11 @@ map <C-F12> :!ctags -R --c++-kinds=+pl --fields=+iaS --extra=+q --language-force
 map <C-F11> :!ctags -R --fields=+iaS --extra=+q .<CR>
 
 """"""""""""""""""""""""""""""
-" => Command-T (needs to be compiled with ruby)
-""""""""""""""""""""""""""""""
-let g:CommandTMaxHeight = 25
-" Tab and C-i are linked to focus i don't know why...
-"let g:CommandTToggleFocusMap=['<Tab>']
-let g:CommandTToggleFocusMap=['<C-z>']
-let g:CommandTAcceptSelectionSplitMap=['<C-i>']
-set wildignore+=*.o,*.obj,.git,.hg,*.pyc
-noremap <leader>y :CommandTFlush<cr>
-
-""""""""""""""""""""""""""""""
 " => Syntastic
 """"""""""""""""""""""""""""""
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_javascript_jshint_args = '--config $HOME/.jshintrc'
+" let g:syntastic_javascript_jshint_args = '--config $HOME/.jshintrc'
 " let g:syntastic_python_checkers = ['pylint']
 "Disable annoying pylint mesages
 "   C0103 Invalid constant name
