@@ -79,6 +79,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'dkprice/vim-easygrep'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -179,6 +181,13 @@ vmap <Enter> <Plug>(EasyAlign)
 "
 " Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
 nmap <Leader>a <Plug>(EasyAlign)
+
+""""""""""""""""""""""""""""""
+" => Airline
+""""""""""""""""""""""""""""""
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 """"""""""""""""""""""""""""""
 " => Misc
