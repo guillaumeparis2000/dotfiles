@@ -81,6 +81,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'dkprice/vim-easygrep'
+Plugin 'maksimr/vim-jsbeautify'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -99,6 +100,8 @@ if $COLORTERM == 'gnome-terminal'
 endif
 colorscheme Tomorrow-Night-Eighties
 
+
+nnoremap <TAB> :bnext<CR>
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
