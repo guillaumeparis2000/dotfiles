@@ -30,6 +30,9 @@ set shell=/bin/zsh
 set encoding=utf-8
 set ffs=unix,dos,mac "Default file types
 
+" Start with vertical split
+au VimEnter * vsplit
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -98,7 +101,7 @@ syntax enable
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
-colorscheme Tomorrow-Night-Eighties
+colorscheme Monokai
 
 
 nnoremap <TAB> :bnext<CR>
@@ -217,3 +220,16 @@ nmap <silent> <leader>f <Esc>:call CleanFile()<CR>
 " => tagbar
 """"""""""""""""""""""""""""""
 nmap <F8> :TagbarToggle<CR>
+
+""""""""""""""""""""""""""""""
+" => CtrlP
+""""""""""""""""""""""""""""""
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/* 
+let g:ctrlp_working_path_mode = 0
+
+""""""""""""""""""""""""""""""
+" => EasyGrep
+""""""""""""""""""""""""""""""
+let g:EasyGrepRecursive = 1
+let g:EasyGrepCommand = 1
+let g:EasyGrepFilesToExclude = ".git,node_modules,bower_components"
