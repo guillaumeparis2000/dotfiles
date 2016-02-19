@@ -85,6 +85,8 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'dkprice/vim-easygrep'
 Plugin 'maksimr/vim-jsbeautify'
+Plugin 'mtth/scratch.vim'
+"Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -167,7 +169,7 @@ map <C-F11> :!ctags -R --fields=+iaS --extra=+q .<CR>
 " => Syntastic
 """"""""""""""""""""""""""""""
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['jshint', 'jscs']
 " let g:syntastic_javascript_jshint_args = '--config $HOME/.jshintrc'
 " let g:syntastic_python_checkers = ['pylint']
 "Disable annoying pylint mesages
