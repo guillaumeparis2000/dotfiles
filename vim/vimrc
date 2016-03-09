@@ -76,7 +76,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'wakatime/vim-wakatime'
-" Plugin 'junegunn/vim-easy-align'
+Plugin 'junegunn/vim-easy-align'
 Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
@@ -106,7 +106,16 @@ endif
 colorscheme Monokai
 
 
+""""""""""""""""""""""""""""""
+" => Custom commands
+""""""""""""""""""""""""""""""
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+
+""""""""""""""""""""""""""""""
+" => Shortcuts
+""""""""""""""""""""""""""""""
 nnoremap <TAB> :bnext<CR>
+
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -169,7 +178,8 @@ map <C-F11> :!ctags -R --fields=+iaS --extra=+q .<CR>
 " => Syntastic
 """"""""""""""""""""""""""""""
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_javascript_checkers = ['jscs']
 " let g:syntastic_javascript_jshint_args = '--config $HOME/.jshintrc'
 " let g:syntastic_python_checkers = ['pylint']
 "Disable annoying pylint mesages
