@@ -86,6 +86,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'dkprice/vim-easygrep'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'mtth/scratch.vim'
+Plugin 'moll/vim-bbye'
 "Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
@@ -115,7 +116,7 @@ command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 " => Shortcuts
 """"""""""""""""""""""""""""""
 nnoremap <TAB> :bnext<CR>
-
+nnoremap <C-b> :Bdelete
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
