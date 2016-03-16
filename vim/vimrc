@@ -190,6 +190,7 @@ let g:syntastic_javascript_checkers = ['jscs']
 "   W0142 Used * or ** magic (Why not? Nonsens!)
 let g:syntastic_python_pylint_post_args='--disable=C0103,R0903,W0141,W0142'
 " let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_html_tidy_exec = 'tidy5'
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 """"""""""""""""""""""""""""""
@@ -213,6 +214,10 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 """"""""""""""""""""""""""""""
 " Keep the cursos in the middle of the screen
 let &scrolloff=999-&scrolloff
+
+" Change cursor if normal or insert mode
+autocmd InsertEnter * set cul
+autocmd InsertLeave * set nocul
 
 " Functions for cleaning up tabs and spaces
 function! RemoveTrailingSpaces()
