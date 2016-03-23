@@ -117,6 +117,7 @@ command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 """"""""""""""""""""""""""""""
 nnoremap <TAB> :bnext<CR>
 nnoremap <C-b> :Bdelete
+nnoremap <F5> :edit!
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
