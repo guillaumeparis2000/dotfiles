@@ -87,13 +87,14 @@ Plugin 'dkprice/vim-easygrep'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'mtth/scratch.vim'
 Plugin 'moll/vim-bbye'
+Plugin 'scrooloose/nerdcommenter'
 "Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-" "filetype plugin on
+" filetype plugin on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -105,7 +106,6 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 colorscheme Monokai
-
 
 """"""""""""""""""""""""""""""
 " => Custom commands
