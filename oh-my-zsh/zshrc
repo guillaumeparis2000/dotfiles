@@ -38,6 +38,12 @@ ZSH_THEME="mytheme"
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# don't put duplicate lines in the history. See bash(1) for more options
+# don't overwrite GNU Midnight Commander's setting of `ignorespace'.
+export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
+# ... or force ignoredups and ignorespace
+export HISTCONTROL=ignoreboth
+
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
@@ -49,17 +55,19 @@ HIST_STAMPS="dd.mm.yyyy"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git battery cp bower gem docker grunt rsync ssh-agent)
+plugins=(git battery cp bower rsync gem docker npm grunt ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/home/guillaume/npm-global/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export ANDROID_HOME=~/Android/Sdk
+
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=fr_FR.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -84,3 +92,6 @@ fi
 #   boot2docker ip 2> /dev/null
 # }
 
+# Get meteo for Barcelona on start
+curl http://wttr\.in/barcelona
+. /etc/profile.d/vte.sh
