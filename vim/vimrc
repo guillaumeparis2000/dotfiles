@@ -31,7 +31,7 @@ set encoding=utf-8
 set ffs=unix,dos,mac "Default file types
 
 " Start with vertical split
-au VimEnter * vsplit
+" au VimEnter * vsplit
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
