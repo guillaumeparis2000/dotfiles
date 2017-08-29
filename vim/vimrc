@@ -252,3 +252,8 @@ let g:ctrlp_working_path_mode = 0
 let g:EasyGrepRecursive = 1
 let g:EasyGrepCommand = 1
 let g:EasyGrepFilesToExclude = ".git,node_modules,bower_components"
+
+""""""""""""""""""""""""""""""
+" => Sudo shortcut
+""""""""""""""""""""""""""""""
+cmap w!! w !sudo tee % >/dev/null
