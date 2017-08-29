@@ -1,51 +1,51 @@
 [global_config]
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
-  always_on_top = True
   focus = system
-  sticky = True
 [keybindings]
   hide_window = F1
-[profiles]
-  [[default]]
-    background_image = None
-    custom_command = env TERM=xterm-256color /usr/bin/zsh
-    background_type = transparent
-    use_custom_command = True
-    background_darkness = 0.87
-    copy_on_selection = True
 [layouts]
   [[default]]
     [[[child0]]]
-      position = 1366:25
-      type = Window
       order = 0
       parent = ""
+      position = 1366:25
       size = 1920, 1029
+      type = Window
     [[[terminal1]]]
-      profile = default
-      type = Terminal
       order = 0
       parent = child0
+      profile = default
+      type = Terminal
   [[splitted]]
     [[[child0]]]
-      position = 1366:1455
-      type = Window
       order = 0
       parent = ""
+      position = 1366:1455
       size = 1912, 259
+      type = Window
     [[[child1]]]
-      position = 956
-      type = HPaned
       order = 0
       parent = child0
-    [[[terminal3]]]
-      profile = default
-      type = Terminal
-      order = 1
-      parent = child1
+      position = 956
+      type = HPaned
     [[[terminal2]]]
-      profile = default
-      type = Terminal
       order = 0
       parent = child1
+      profile = default
+      type = Terminal
+    [[[terminal3]]]
+      order = 1
+      parent = child1
+      profile = default
+      type = Terminal
 [plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.87
+    background_image = None
+    background_type = transparent
+    copy_on_selection = True
+    custom_command = env TERM=xterm-256color /usr/bin/zsh
+    font = Monospace 14
+    use_custom_command = True
+    use_system_font = False
