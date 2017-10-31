@@ -111,6 +111,3 @@ export PATH=${PATH}:${GOROOT}/bin
 #
 # # Ensure that compiled binaries are also on your PATH.
 export PATH=${PATH}:${GOPATH}/bin
-
-# Start tmux default session
-tmux new -s default
