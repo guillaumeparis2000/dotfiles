@@ -106,6 +106,9 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 colorscheme Monokai
+" Change some colors. Map reference --> https://upload.wikimedia.org/wikipedia/en/1/15/Xterm_256color_chart.svg
+hi Visual ctermbg=025
+hi CursorLine ctermbg=238
 
 """"""""""""""""""""""""""""""
 " => Custom commands
@@ -243,7 +246,7 @@ nmap <F8> :TagbarToggle<CR>
 """"""""""""""""""""""""""""""
 " => CtrlP
 """"""""""""""""""""""""""""""
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/* 
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 let g:ctrlp_working_path_mode = 0
 
 """"""""""""""""""""""""""""""
