@@ -101,7 +101,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Point to the local installation of golang.
-export GOROOT=/usr/lib/go-1.9/bin/go
+export GOROOT=/usr/lib/go-1.9
 #
 # # Point to the location beneath which source and binaries are installed.
 export GOPATH=$HOME/workspace/go
