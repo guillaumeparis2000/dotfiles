@@ -10,16 +10,20 @@ then
 
 fi
 
+brew analytics off
+
 # Update homebrew formaulaes
 brew update
 
 # Install some packages
-brew install wget ssh-copy-id coreutils hub
+brew install wget ssh-copy-id coreutils trash tmux reattach-to-user-namespace watch colordiff exiftool gpg
 
 # Tell applications that use xcode-select where the GNU utils are located
 sudo xcode-select --switch /usr/bin
 
 # Install homebrew cask
-brew tap phinze/homebrew-cask
+brew tap caskroom/cask
 brew tap caskroom/versions
-brew install brew-cask
+
+# Install a new version of rsync
+brew install homebrew/dupes/rsync

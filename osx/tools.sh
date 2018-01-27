@@ -27,3 +27,12 @@ brew cask install evernote
 # Calibre E-book
 ##########
 brew cask install calibre
+
+# The Unarchiver
+##########
+brew cask install the-unarchiver
+
+# Flux
+###########
+
+brew cask install flux
