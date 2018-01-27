@@ -11,3 +11,7 @@ defaults write com.skype.skype UserDefinedEvents '{ FirstMessageReceived = { Dis
 # Telegram
 ##########
 brew cask install telegram
+
+# Slack
+##########
+brew cask install slack

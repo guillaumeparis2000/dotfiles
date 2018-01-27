@@ -14,10 +14,10 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Restart automatically if the computer freezes
-sudo systemsetup -setrestartfreeze On
+# sudo systemsetup -setrestartfreeze On
 
 # Enable remote SSH login
-sudo systemsetup -setremotelogin On
+# sudo systemsetup -setremotelogin On
 
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
@@ -56,8 +56,8 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-# Default to list view in Finder windows (others: `icnv`, `clmv`, `Flwv`)
-#defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+# Default to list view in Finder windows (possible values: icnv (Icon View), Nlsv (List View), clmv (Column View), Flwv (Cover Flow View))
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 ############
 # Keyboard
