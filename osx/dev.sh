@@ -22,3 +22,7 @@ git config --global mergetool.kdiff3.path /Applications/kdiff3.app/Contents/MacO
 # GPG-utils
 ###########
 brew cask install gpg-utils
+
+# Postman
+###########
+brew cask install postman
