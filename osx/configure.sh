@@ -13,11 +13,14 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
+# Never go into computer sleep mode
+sudo systemsetup -setcomputersleep Off
+
 # Restart automatically if the computer freezes
 # sudo systemsetup -setrestartfreeze On
 
 # Enable remote SSH login
-# sudo systemsetup -setremotelogin On
+sudo systemsetup -setremotelogin On
 
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
@@ -37,6 +40,9 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -59,6 +65,22 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 # Default to list view in Finder windows (possible values: icnv (Icon View), Nlsv (List View), clmv (Column View), Flwv (Cover Flow View))
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+
+# Increase grid icons and spacing for icons on the desktop and in other icon views
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 100" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 80" ~/Library/Preferences/com.apple.finder.plist
+
+################
+# Security
+################
+
+# Ask for password after 60s the screensaver appears
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 60
+
+# Disable GateKeeper (to allow third party apps to be installed)
+#sudo spctl --master-disable
 
 ############
 # Keyboard
