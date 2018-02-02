@@ -43,8 +43,6 @@
     lg2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
     lg3 = log --graph --abbrev-commit --date=relative --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s - %Cblue%an%Creset %Cgreen(%ad)%Creset'
 	stashq = -c commit.gpgsign=false stash
-[user]
-	email = guillaume.paris.work@gmail.com
-	name = Guillaume PARIS
+
 [commit]
 	gpgsign = true
