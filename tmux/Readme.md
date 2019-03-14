@@ -4,7 +4,7 @@
 
 Tmux is a terminal multiplexer like screen. It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal. And do a lot more
 
-Some Tmux commands based on [my current configuration](https://github.com/guillaumeparis2000/dotfiles/blob/master/tmux/tmux.conf):
+Some Tmux commands based on [my current configuration](tmux.conf):
 
 ## Shell commands:
   * __tmux new -s <session name>:__ Create a new tmux session called `<session name>`
