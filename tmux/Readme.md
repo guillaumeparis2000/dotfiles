@@ -29,3 +29,23 @@ Some Tmux commands based on [my current configuration](tmux.conf):
   * __Ctrl + a : resize-pane -r:__ Right pane resize
   * __Ctrl + a : resize-pane -l:__ Left pane resize
   * __Ctrl + a m:__ Enable/Disable mouse mode
+
+## Share session betweeen various users:
+For different users, you have to set the permissions on the tmux socket so that both users can read and write it. There is only one prerequiste, that there be a group in common between the two users. If such a group does not exist it will be necessary to create one.
+
+In the first terminal, start tmux where `shared` is the session name and `shareds` is the name of the socket:
+```sh
+tmux -S /tmp/shareds new -s shared
+```
+
+Then `chgrp` the socket to a group that both users share in common. In this example, `tmux` is the group that both users share. If there are other users in the group, then they also have access. So it might be recommended that the group have only the two members.
+```sh
+chgrp tmux /tmp/shareds
+```
+
+In the second terminal attach using that socket and session.
+```sh
+tmux -S /tmp/shareds attach -t shared
+```
+
+For more tips on sharing session with tmux, [see](https://www.howtoforge.com/sharing-terminal-sessions-with-tmux-and-screen#sharing-between-two-different-accounts-with-tmux)
