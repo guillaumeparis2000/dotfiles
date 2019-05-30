@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AboutToPasteTabsWithCancel</key>
+	<true/>
+	<key>AboutToPasteTabsWithCancel_selection</key>
+	<integer>2</integer>
+	<key>AllowClipboardAccess</key>
+	<true/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>AppleScrollAnimationEnabled</key>
@@ -17,8 +25,10 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/workspace/dotfiles/iterm2</string>
+	<string>~/Documents</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{712, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
@@ -51,12 +61,20 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>1970 476 620 392 1440 0 1680 1027 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>269 126 606 469 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>146 181 918 512 0 0 1280 777 </string>
+	<string>1816 385 796 486 1440 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 317 570 452 0 0 1280 777 </string>
+	<string>0 49 1440 828 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>411 272 570 452 0 0 1280 777 </string>
+	<string>1440 575 570 452 1440 0 1680 1027 </string>
+	<key>NeverWarnAboutShortLivedSessions_51B1988F-B65A-4640-903C-61507EDB36A2</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_51B1988F-B65A-4640-903C-61507EDB36A2_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -651,24 +669,28 @@
 			<string>/Users/gpa</string>
 		</dict>
 	</array>
+	<key>NoSyncHaveRequestedFullDiskAccess</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>3B729B86-C1EC-4C98-916C-F87CC93C0414</string>
-	<key>NoSyncLastTipTime</key>
-	<real>538494285.67835104</real>
+	<string>2D08CB35-A494-4C88-AAA9-99CB9F889029</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
+	<false/>
+	<key>NoSyncSuppressMissingProfileInArrangementWarning</key>
+	<true/>
+	<key>NoSyncSuppressRestartSessionConfirmationAlert</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>538310209.79760504</real>
-	<key>NoSyncTipsToNotShow</key>
-	<array>
-		<string>000</string>
-	</array>
+	<real>539205981.68037605</real>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>4</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -704,21 +726,23 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/gpa/workspace/dotfiles/iterm2</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=6</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=11</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-01-23T15:43:55Z</date>
+	<date>2019-01-16T14:49:49Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.1.5</string>
+	<string>3.2.6</string>
 </dict>
 </plist>

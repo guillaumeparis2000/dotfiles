@@ -70,7 +70,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin/end.
-Plugin 'Valloric/YouCompleteMe'
+"  Plugin 'Valloric/YouCompleteMe'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
@@ -113,7 +113,7 @@ hi CursorLine ctermbg=238
 """"""""""""""""""""""""""""""
 " => Custom commands
 """"""""""""""""""""""""""""""
-command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+" command w!! :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 """"""""""""""""""""""""""""""
 " => Shortcuts
