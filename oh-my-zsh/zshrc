@@ -54,10 +54,28 @@ HIST_STAMPS="dd.mm.yyyy"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git cp rsync docker docker-compose ssh-agent pip)
+# Antigen initialisation
+source /usr/local/share/antigen/antigen.zsh
+
+# Activate bundles from oh-my-zsh
+antigen bundle git
+antigen bundle rsync
+antigen bundle docker
+antigen bundle docker-compose
+antigen bundle ssh-agent
+antigen bundle pip
+antigen bundle nvm
+antigen bundle zsh-nvm
+antigen bundle yarn
+
+# Activate bundles from github
+export NVM_DIR="$HOME/.nvm"
+export NVM_LAZY_LOAD=true
+export NVM_NO_USE=true
+antigen bundle lukechilds/zsh-nvm
+
+# Apply changes
+antigen apply
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,27 +105,8 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
-# Docker for Mac
-# docker-ip() {
-#   boot2docker ip 2> /dev/null
-# }
-
 # Get meteo for Barcelona on start
-curl http://wttr\.in/barcelona
-#. /etc/profile.d/vte.sh
+# curl http://wttr\.in/barcelona
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Point to the local installation of golang.
-#export GOROOT=/usr/local/opt/go/libexec/bin
-#
-# # Point to the location beneath which source and binaries are installed.
-export GOPATH=$HOME/workspace/go
-#
-# # Ensure that the binary-release is on your PATH.
-#export PATH=${PATH}:${GOROOT}/bin
-#
-# # Ensure that compiled binaries are also on your PATH.
-export PATH=${PATH}:${GOPATH}/bin
+# tell brew do not call home
+export HOMEBREW_NO_ANALYTICS=1
