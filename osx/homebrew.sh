@@ -16,7 +16,7 @@ brew analytics off
 brew update
 
 # Install some packages
-brew install wget ssh-copy-id coreutils trash tmux reattach-to-user-namespace watch colordiff exiftool gpg
+brew install wget ssh-copy-id coreutils trash tmux reattach-to-user-namespace watch colordiff exiftool gpg gpg2 gnupg
 
 # Tell applications that use xcode-select where the GNU utils are located
 sudo xcode-select --switch /usr/bin
@@ -24,6 +24,3 @@ sudo xcode-select --switch /usr/bin
 # Install homebrew cask
 brew tap caskroom/cask
 brew tap caskroom/versions
-
-# Install a new version of rsync
-brew install homebrew/dupes/rsync
