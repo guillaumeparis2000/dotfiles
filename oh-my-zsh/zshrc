@@ -19,6 +19,7 @@ antigen bundle pip
 antigen bundle nvm
 antigen bundle zsh-nvm
 antigen bundle yarn
+antigen bundle gcloud
 
 # Activate bundles from github
 export NVM_DIR="$HOME/.nvm"
@@ -58,3 +59,6 @@ export HOMEBREW_NO_ANALYTICS=1
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="/usr/local/sbin:$PATH"
+
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
