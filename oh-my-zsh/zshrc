@@ -54,7 +54,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-plugins=(git kubectl rsync docker docker-compose ssh-agent pip nvm yarn gcloud)
+plugins=(git kubectl zsh-kubectl-prompt rsync docker docker-compose ssh-agent pip nvm yarn gcloud)
 
 # Activate bundles from github
 export NVM_DIR="$HOME/.nvm"
