@@ -136,10 +136,6 @@ jdk() {
     java -version
  }
 
-# export PATH="$HOME/.poetry/bin:$PATH"
-
-export NPM_TOKEN="35129c17-dbdf-4508-83c9-ac67ab8f82f6"
-
 # Kubernetes
 source <(kubectl completion zsh)
 complete -F __start_kubectl kc
