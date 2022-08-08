@@ -1,5 +1,5 @@
 #!/bin/sh
-export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/opt/homebrew/bin/
 
 # abort if we're already inside a TMUX session
 [ "$TMUX" == "" ] || exit 0
